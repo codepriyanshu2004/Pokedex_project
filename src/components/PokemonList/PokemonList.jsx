@@ -33,18 +33,18 @@ function PokemonList() {
         console.log(response.data)
 
 
-        const pokemonResults = response.data.results; // we get the array of pokemons from result
+        const pokemonResults = response.data.results; // we get the array of pokemons from result its array have name  url only then after we use this url to get detail like image and more
         
         setNextUrl(response.data.next)
         setPrevUrl(response.data.previous)
 
 
         //iterating over the array of pokemons ,and using thier url,to create an array of promise
-        //that will download those 20 pokemons
+        //that will download those 20 pokemons 
         const pokemonResultPromise=  pokemonResults.map((pokemon) => axios.get(pokemon.url))
         
         // passing that promise array to axios.all
-        const pokemonData = await axios.all(pokemonResultPromise) //array of 20 pokon detailed data
+        const pokemonData = await axios.all(pokemonResultPromise) //array of 20 pokemon detailed data
         console.log(pokemonData);
   
 
@@ -85,7 +85,7 @@ function PokemonList() {
      {(isLoading)?"Loading...":
       // "Data downloaded"  
       
-      pokemonList.map((p)=> <Pokemon name ={p.name} image={p.image} key ={p.id} />)
+      pokemonList.map((p)=> <Pokemon name ={p.name} image={p.image} key ={p.id}   id={p.id}  />)
 
       }
 

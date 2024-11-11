@@ -1,0 +1,9 @@
+.Pokemon-name{
+    font-size: xx-large;
+    color: black;
+    margin-top: 3rem;
+}
+
+.Pokemon-name> span{
+    letter-spacing: 1rem;
+}
