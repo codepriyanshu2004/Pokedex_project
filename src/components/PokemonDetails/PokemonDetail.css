@@ -4,6 +4,36 @@
     margin-top: 3rem;
 }
 
-.Pokemon-name> span{
-    letter-spacing: 1rem;
+.pokemon-details-name> span{
+    letter-spacing: 1em;
 }
+.pokemon-details-name{
+    margin-top: 1rem;
+    font-size: larger;
+}
+
+.pokemon-details-types{
+    display: flex;
+    margin-top: 2em;
+    gap: 3rem;
+    font-size: large;
+
+}
+
+.pokemon-details-types div{
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: gainsboro;
+
+}
+
+.pokemon-details-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+

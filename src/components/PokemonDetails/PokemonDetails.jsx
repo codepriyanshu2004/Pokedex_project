@@ -39,13 +39,14 @@ function PokemonDetails() {
     return (
         <div className='pokemon-details-wrapper'>
 
-            <div className='Pokemon-name'>name: <span>{pokemon.name}</span></div>
+           
             <img className='pokemon-image' src ={pokemon.image}></img>
-            <div className='Pokemon-height'>Heigth:{pokemon.height}</div>
-            <div className='Pokemon-weight'>Weight:{pokemon.weight} s</div>
+            <div className='pokemon-details-name'> <span>{pokemon.name}</span></div>
+            <div className='pokemon-details-name'>Heigth: {pokemon.height}</div>
+            <div className='pokemon-details-name'>Weight:{pokemon.weight} </div>
       
 
-      <div className='pokemon-types'>
+      <div className='pokemon-details-types'>
        { pokemon.types && pokemon.types.map((t)  => <div key={t}>  {t} </div>)}
       </div>
 
